@@ -70,7 +70,7 @@ export const ProblemStatement = () => {
         const fetchProblem = async () => {
             try {
                 console.log();
-                const response = await axios.get(`http://localhost:8000/problemStatement/${problemID}`);
+                const response = await axios.get(`https://oj-backend-test.vercel.app/problemStatement/${problemID}`);
                 setProblem(response.data);
                 console.log("Problem statement fetched!!");
             } catch (error) {
@@ -93,7 +93,7 @@ export const ProblemStatement = () => {
         try {
             setLoading(true);
 
-            const { data } = await axios.post('http://localhost:8000/ide', payload);
+            const { data } = await axios.post('https://oj-backend-test.vercel.app/ide', payload);
             setOutput(data.output);
             setLoading(false);
             setError(null);
@@ -131,7 +131,7 @@ export const ProblemStatement = () => {
         };
         try {
             const { data } = await axios.post(
-                "http://localhost:8000/submit",
+                "https://oj-backend-test.vercel.app/submit",
                 payload
             );
             const { accepted, total_cases } = data;

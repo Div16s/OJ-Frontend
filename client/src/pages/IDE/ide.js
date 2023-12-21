@@ -62,7 +62,7 @@ export const IDE = () => {
         try {
             setLoading(true);
 
-            const { data } = await axios.post('http://localhost:8000/ide', payload);
+            const { data } = await axios.post('https://oj-backend-test.vercel.app/ide', payload);
             setOutput(data.output);
             setLoading(false);
             setError(null);

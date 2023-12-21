@@ -30,7 +30,7 @@ export const LoginPage = () => {
       }
 
       const { data } = await axios.post(
-        "http://localhost:8000/login",
+        "https://oj-backend-test.vercel.app/login",
         {
           email,
           password,

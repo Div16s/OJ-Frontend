@@ -14,7 +14,7 @@ export const ProblemsSet = ({ search }) => {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:8000/problems')
+        axios.get('https://oj-backend-test.vercel.app/problems')
             .then(problemSet => setProblemSet(problemSet.data))
             .catch(err => console.log("Not found problem set!"))
         // const fetchProblemSet = async () => {

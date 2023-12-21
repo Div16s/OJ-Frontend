@@ -25,7 +25,7 @@ export const Submissions = () => {
             };
             // console.log(email);
             try {
-                const response = await axios.get("http://localhost:8000/submissions", config)
+                const response = await axios.get("https://oj-backend-test.vercel.app/submissions", config)
                 setData(response.data);
                 console.log(data);
                 // console.log(response);

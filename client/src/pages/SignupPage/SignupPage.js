@@ -45,7 +45,7 @@ export const SignupPage = () => {
         setLoading(true);
 
         const { data } = await axios.post(
-          "http://localhost:8000/signup",
+          "https://oj-backend-test.vercel.app/signup",
           {
             name,
             email,
